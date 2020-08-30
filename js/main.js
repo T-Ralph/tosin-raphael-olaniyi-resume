@@ -1,19 +1,21 @@
+//Declare Constants
+let menuMobileDisplay = true; //Set menuMobileDisplay
+
 //Declare Functions
 menuToggle = () => {
     const menuIcon = document.querySelector("header > nav > i"); //DOM Query Menu Icon
     const navigationList = document.querySelector("header > nav > ul"); //DOM Query Navigation UL
-    //Check if Menu is Displayed
-    if (navigationList.classList.contains("show")) {
-        //Hide Menu
-        menuIcon.className = "fas fa-bars fa-2x";
-        navigationList.classList.remove("show");
-        navigationList.classList.add("hide");
-    }
-    else {
+    if (menuMobileDisplay) {
         //Show Menu
         menuIcon.className = "fas fa-times fa-2x";
-        navigationList.classList.remove("hide");
-        navigationList.classList.add("show");
+        navigationList.style.display = "block";
+        menuMobileDisplay = false; //Set menuMobileDisplay
+    }
+    else {
+        //Hide Menu
+        menuIcon.className = "fas fa-bars fa-2x";
+        navigationList.style.display = "none";
+        menuMobileDisplay = true; //Set menuMobileDisplay
     }
 }
 
