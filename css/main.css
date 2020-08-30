@@ -148,7 +148,7 @@ main > article {
     grid-template-areas:
         "section-home";
 }
-@media screen and ( min-width: 800px ) {
+@media screen and ( min-width: 1000px ) {
     header > nav > i {
         display: none !important;
     }
