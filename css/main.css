@@ -1,0 +1,75 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #FFFFFF;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+header {
+    background-color: #003F80;
+    opacity: 0.95;
+    color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    font-family: 'Gayathri', sans-serif;
+}
+header > nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+header > nav > h2 {
+    display: none;
+}
+header > nav > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+header > nav > h3 {
+    text-align: center;
+    font-size: 25px;
+}
+header > nav > i {
+    cursor: pointer;
+}
+header > nav > ul {
+    width: 100%;
+    list-style: none;
+    padding: 10px 0px;
+}
+header > nav > ul > li {
+    display: block;
+    padding: 10px 0px 0px 0px;
+    font-size: 25px;
+}
+header > nav > h3 > a:link,
+header > nav > h3 > a:hover,
+header > nav > h3 > a:active,
+header > nav > h3 > a:visited,
+header > nav > ul > li > a:link,
+header > nav > ul > li > a:active,
+header > nav > ul > li > a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+header > nav > ul > li > a:hover {
+    color: #DDDDDD;
+    text-decoration: underline;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
