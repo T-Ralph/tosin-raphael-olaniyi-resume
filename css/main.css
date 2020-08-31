@@ -22,9 +22,6 @@ header {
     z-index: 1;
     font-family: 'Gayathri', sans-serif;
 }
-header > nav {
-    width: 100%;
-}
 header > nav > h2 {
     display: none;
 }
@@ -80,9 +77,6 @@ main {
     width: 100%;
     box-sizing: border-box;
 }
-main > article {
-    width: 100%;
-}
 main > article > h1 {
     display: none;
 }
@@ -90,6 +84,7 @@ main > article > section#home {
     grid-area: section-home;
     background-image: url(../img/section-home-background.jpg);
     width: 100%;
+    box-sizing: border-box;
     height: 100vh;
     text-align: center;
     font-family: 'Gayathri', sans-serif;
@@ -102,16 +97,18 @@ main > article > section#home > div#hero {
     color: #FFFFFF;
 }
 main > article > section#home > div#hero > h2 {
-    grid-area: hero-title;
+    grid-area: hero-h2;
     text-align: center;
     font-size: 60px;
 }
 main > article > section#home > div#hero > a {
-    grid-area: hero-a-button;
-}
-main > article > section#home > div#hero > a > button {
+    grid-area: hero-a;
     background-color: #000000;
     color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    text-decoration: none;
     border: 1px solid #000000;
     border-radius: 10px;
     cursor: pointer;
@@ -119,9 +116,38 @@ main > article > section#home > div#hero > a > button {
     text-align: center;
     font-size: 45px;
 }
-main > article > section#home > div#hero > a > button:hover {
+main > article > section#home > div#hero > a:hover {
     background-color: #FFFFFF;
     color: #000000;
+}
+main > article > section#education {
+    grid-area: section-education;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 30px 30px 30px;
+}
+main > article > section#education > h2 {
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 35px;
+}
+main > article > section#education > div.education-container {
+    width: 100%;
+    margin: 10px 0px;
+}
+main > article > section#education > div.education-container > div.education-image {
+    grid-area: section-education-image;
+    text-align: right;
+    padding: 10px;
+}
+main > article > section#education > div.education-container > div.education-image > img {
+    width: 70px;
+    height: 80px;
+}
+main > article > section#education > div.education-container > div.education-content {
+    grid-area: section-education-content;
+    text-align: justify;
+    padding: 10px;
 }
 header > nav {
     display: grid;
@@ -129,6 +155,13 @@ header > nav {
     grid-template-areas:
         "nav-img-text nav-icon"
         "nav-list nav-list";
+}
+main > article {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "section-home"
+        "section-education";
 }
 main > article > section#home > div#hero {
     display: grid;
@@ -139,14 +172,14 @@ main > article > section#home > div#hero {
         "."
         "."
         "."
-        "hero-title"
-        "hero-a-button";
+        "hero-h2"
+        "hero-a";
 }
-main > article {
+main > article > section#education > div.education-container {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 20% 80%;
     grid-template-areas:
-        "section-home";
+        "section-education-image section-education-content";
 }
 @media screen and ( min-width: 1000px ) {
     header > nav > i {
@@ -166,5 +199,14 @@ main > article {
         grid-template-columns: 20% 80%;
         grid-template-areas:
             "nav-img-text nav-list";
+    }
+    main > article > section#education > div.education-container > div.education-image {
+        padding: 10px 30px;
+    }
+    main > article > section#education > div.education-container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "section-education-image section-education-content";
     }
 }
