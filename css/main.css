@@ -120,15 +120,15 @@ main > article > section#home > div#hero > a:hover {
     background-color: #FFFFFF;
     color: #000000;
 }
-main > article > section#education,
-main > article > section#experience {
+main > article > section#education {
     grid-area: section-education;
     width: 100%;
     box-sizing: border-box;
     padding: 0px 30px 30px 30px;
 }
 main > article > section#education > h2,
-main > article > section#experience > h2 {
+main > article > section#experience > h2,
+main > article > section#skills > h2 {
     text-align: center;
     font-family: 'Gayathri', sans-serif;
     font-size: 35px;
@@ -139,8 +139,7 @@ main > article > section#experience > div.experience-container {
     width: 100%;
     margin: 10px 0px;
 }
-main > article > section#education > div.education-container > div.education-image,
-main > article > section#experience > div.experience-container > div.experience-organization {
+main > article > section#education > div.education-container > div.education-image {
     grid-area: section-education-image;
     text-align: left;
     padding: 10px;
@@ -150,20 +149,26 @@ main > article > section#experience > div.experience-container > div.experience-
     width: 70px;
     height: 80px;
 }
-main > article > section#education > div.education-container > div.education-content,
-main > article > section#experience > div.experience-container > div.experience-content {
+main > article > section#education > div.education-container > div.education-content {
     grid-area: section-education-content;
     text-align: justify;
     padding: 10px;
 }
 main > article > section#experience {
     grid-area: section-experience;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 30px 30px 30px;
 }
 main > article > section#experience > div.experience-container > div.experience-organization {
     grid-area: section-experience-organization;
+    text-align: left;
+    padding: 10px;
 }
 main > article > section#experience > div.experience-container > div.experience-content {
     grid-area: section-experience-content;
+    text-align: justify;
+    padding: 10px;
 }
 main > article > section#experience > div.experience-container > div.experience-content > p > a:link,
 main > article > section#experience > div.experience-container > div.experience-content > p > a:hover,
@@ -171,6 +176,84 @@ main > article > section#experience > div.experience-container > div.experience-
 main > article > section#experience > div.experience-container > div.experience-content > p > a:visited {
     color: #003F80;
     text-decoration: none;
+}
+main > article > section#skills {
+    grid-area: section-skills;
+    width: 100%;
+    box-sizing: border-box;
+}
+main > article > section#skills > h2 {
+    grid-area: section-skills-h2;
+}
+main > article > section#skills > div.skills-languages {
+    grid-area: section-skills-languages;
+}
+main > article > section#skills > div.skills-databases {
+    grid-area: section-skills-databases;
+}
+main > article > section#skills > div.skills-others {
+    grid-area: section-skills-others;
+}
+main > article > section#skills > div.skills-languages > h3,
+main > article > section#skills > div.skills-databases > h3,
+main > article > section#skills > div.skills-others > h3 {
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+main > article > section#skills > div.skills-languages,
+main > article > section#skills > div.skills-databases,
+main > article > section#skills > div.skills-others {
+    padding: 15px 35px;
+}
+main > article > section#skills div.skill-set {
+    width: 100%;
+    margin: 10px 0px;
+}
+main > article > section#skills div.skill-name {
+    font-weight: bold;
+    text-align: center;
+}
+main > article > section#skills div.skill-level {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 12px;
+}
+main > article > section#skills div.skill-level > div.skill-actual {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 3px 15px;
+    border-radius: 10px;
+    text-align: right;
+    color: #FFFFFF;
+}
+main > article > section#skills div.skill-level > div.html,
+main > article > section#skills div.skill-level > div.css,
+main > article > section#skills div.skill-level > div.js,
+main > article > section#skills div.skill-level > div.php,
+main > article > section#skills div.skill-level > div.python,
+main > article > section#skills div.skill-level > div.mysql,
+main > article > section#skills div.skill-level > div.sqlite,
+main > article > section#skills div.skill-level > div.leadership,
+main > article > section#skills div.skill-level > div.team-player,
+main > article > section#skills div.skill-level > div.time-management,
+main > article > section#skills div.skill-level > div.communication,
+main > article > section#skills div.skill-level > div.customer-service  {
+    background-color: #007600;
+    width: 100%;
+}
+main > article > section#skills div.skill-level > div.c-sharp,
+main > article > section#skills div.skill-level > div.postgresql,
+main > article > section#skills div.skill-level > div.gcp,
+main > article > section#skills div.skill-level > div.linux,
+main > article > section#skills div.skill-level > div.digital-ocean {
+    background-color: #2C5197;
+    width: 80%;
 }
 header > nav {
     display: grid;
@@ -185,7 +268,8 @@ main > article {
     grid-template-areas:
         "section-home"
         "section-education"
-        "section-experience";
+        "section-experience"
+        "section-skills";
 }
 main > article > section#home > div#hero {
     display: grid;
@@ -210,6 +294,15 @@ main > article > section#experience > div.experience-container {
     grid-template-columns: 20% 80%;
     grid-template-areas:
         "section-experience-organization section-experience-content";
+}
+main > article > section#skills {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "section-skills-h2"
+        "section-skills-languages"
+        "section-skills-databases"
+        "section-skills-others";
 }
 @media screen and ( min-width: 1000px ) {
     header > nav > i {
@@ -246,5 +339,12 @@ main > article > section#experience > div.experience-container {
         grid-template-columns: 40% 60%;
         grid-template-areas:
             "section-experience-organization section-experience-content";
+    }
+    main > article > section#skills {
+        display: grid;
+        grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+        grid-template-areas:
+            "section-skills-h2 section-skills-h2 section-skills-h2"
+            "section-skills-languages section-skills-databases section-skills-others";
     }
 }
