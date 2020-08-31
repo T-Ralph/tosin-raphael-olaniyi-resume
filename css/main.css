@@ -120,34 +120,57 @@ main > article > section#home > div#hero > a:hover {
     background-color: #FFFFFF;
     color: #000000;
 }
-main > article > section#education {
+main > article > section#education,
+main > article > section#experience {
     grid-area: section-education;
     width: 100%;
     box-sizing: border-box;
-    padding: 50px 30px 30px 30px;
+    padding: 0px 30px 30px 30px;
 }
-main > article > section#education > h2 {
+main > article > section#education > h2,
+main > article > section#experience > h2 {
     text-align: center;
     font-family: 'Gayathri', sans-serif;
     font-size: 35px;
+    margin: 70px 0px;
 }
-main > article > section#education > div.education-container {
+main > article > section#education > div.education-container,
+main > article > section#experience > div.experience-container {
     width: 100%;
     margin: 10px 0px;
 }
-main > article > section#education > div.education-container > div.education-image {
+main > article > section#education > div.education-container > div.education-image,
+main > article > section#experience > div.experience-container > div.experience-organization {
     grid-area: section-education-image;
-    text-align: right;
+    text-align: left;
     padding: 10px;
 }
-main > article > section#education > div.education-container > div.education-image > img {
+main > article > section#education > div.education-container > div.education-image > img,
+main > article > section#experience > div.experience-container > div.experience-organization > img {
     width: 70px;
     height: 80px;
 }
-main > article > section#education > div.education-container > div.education-content {
+main > article > section#education > div.education-container > div.education-content,
+main > article > section#experience > div.experience-container > div.experience-content {
     grid-area: section-education-content;
     text-align: justify;
     padding: 10px;
+}
+main > article > section#experience {
+    grid-area: section-experience;
+}
+main > article > section#experience > div.experience-container > div.experience-organization {
+    grid-area: section-experience-organization;
+}
+main > article > section#experience > div.experience-container > div.experience-content {
+    grid-area: section-experience-content;
+}
+main > article > section#experience > div.experience-container > div.experience-content > p > a:link,
+main > article > section#experience > div.experience-container > div.experience-content > p > a:hover,
+main > article > section#experience > div.experience-container > div.experience-content > p > a:active,
+main > article > section#experience > div.experience-container > div.experience-content > p > a:visited {
+    color: #003F80;
+    text-decoration: none;
 }
 header > nav {
     display: grid;
@@ -161,7 +184,8 @@ main > article {
     grid-template-columns: 100%;
     grid-template-areas:
         "section-home"
-        "section-education";
+        "section-education"
+        "section-experience";
 }
 main > article > section#home > div#hero {
     display: grid;
@@ -181,6 +205,12 @@ main > article > section#education > div.education-container {
     grid-template-areas:
         "section-education-image section-education-content";
 }
+main > article > section#experience > div.experience-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+        "section-experience-organization section-experience-content";
+}
 @media screen and ( min-width: 1000px ) {
     header > nav > i {
         display: none !important;
@@ -195,18 +225,26 @@ main > article > section#education > div.education-container {
         padding: 0px 20px;
         font-size: 20px;
     }
+    main > article > section#education > div.education-container > div.education-image,
+    main > article > section#experience > div.experience-container > div.experience-organization {
+        padding: 10px 100px;
+        text-align: right;
+    }
     header > nav {
         grid-template-columns: 20% 80%;
         grid-template-areas:
             "nav-img-text nav-list";
-    }
-    main > article > section#education > div.education-container > div.education-image {
-        padding: 10px 30px;
     }
     main > article > section#education > div.education-container {
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-areas:
             "section-education-image section-education-content";
+    }
+    main > article > section#experience > div.experience-container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "section-experience-organization section-experience-content";
     }
 }
