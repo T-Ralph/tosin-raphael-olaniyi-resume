@@ -156,6 +156,11 @@ main > article > section#education > div.education-container > div.education-con
     text-align: justify;
     padding: 10px;
 }
+main > article > section#education > div.education-container > div.education-content > p > a,
+main > article > section#experience > div.experience-container > div.experience-content > p > a {
+    color: #003F80;
+    text-decoration: none;
+}
 main > article > section#experience {
     grid-area: section-experience;
     width: 100%;
@@ -171,13 +176,6 @@ main > article > section#experience > div.experience-container > div.experience-
     grid-area: section-experience-content;
     text-align: justify;
     padding: 10px;
-}
-main > article > section#experience > div.experience-container > div.experience-content > p > a:link,
-main > article > section#experience > div.experience-container > div.experience-content > p > a:hover,
-main > article > section#experience > div.experience-container > div.experience-content > p > a:active,
-main > article > section#experience > div.experience-container > div.experience-content > p > a:visited {
-    color: #003F80;
-    text-decoration: none;
 }
 main > article > section#skills {
     grid-area: section-skills;
@@ -349,7 +347,8 @@ main > article > section#contact > div#social {
     padding: 30px 0px;
     font-size: 20px;
 }
-main > article > section#contact > div#social > p > a {
+main > article > section#contact > div#social > p > a,
+footer > p > a {
     color: #FFFFFF;
     text-decoration: none;
 }
