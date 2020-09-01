@@ -129,7 +129,8 @@ main > article > section#education {
 main > article > section#education > h2,
 main > article > section#experience > h2,
 main > article > section#skills > h2,
-main > article > section#portfolio > h2 {
+main > article > section#portfolio > h2,
+main > article > section#contact > h2 {
     text-align: center;
     font-family: 'Gayathri', sans-serif;
     font-size: 35px;
@@ -195,9 +196,14 @@ main > article > section#skills > div.skills-databases {
 main > article > section#skills > div.skills-others {
     grid-area: section-skills-others;
 }
+main > article > section#skills > div.skills-soft {
+    grid-area: section-skills-soft;
+}
 main > article > section#skills > div.skills-languages > h3,
 main > article > section#skills > div.skills-databases > h3,
-main > article > section#skills > div.skills-others > h3 {
+main > article > section#skills > div.skills-others > h3,
+main > article > section#skills > div.skills-soft > h3,
+main > article > section#contact > div#social > h3 {
     text-align: center;
     font-family: 'Gayathri', sans-serif;
     font-size: 20px;
@@ -205,7 +211,8 @@ main > article > section#skills > div.skills-others > h3 {
 }
 main > article > section#skills > div.skills-languages,
 main > article > section#skills > div.skills-databases,
-main > article > section#skills > div.skills-others {
+main > article > section#skills > div.skills-others,
+main > article > section#skills > div.skills-soft {
     padding: 15px 35px;
 }
 main > article > section#skills div.skill-set {
@@ -241,6 +248,8 @@ main > article > section#skills div.skill-level > div.php,
 main > article > section#skills div.skill-level > div.python,
 main > article > section#skills div.skill-level > div.mysql,
 main > article > section#skills div.skill-level > div.sqlite,
+main > article > section#skills div.skill-level > div.rest-api,
+main > article > section#skills div.skill-level > div.json,
 main > article > section#skills div.skill-level > div.leadership,
 main > article > section#skills div.skill-level > div.team-player,
 main > article > section#skills div.skill-level > div.time-management,
@@ -250,6 +259,7 @@ main > article > section#skills div.skill-level > div.customer-service  {
 }
 main > article > section#skills div.skill-level > div.c-sharp,
 main > article > section#skills div.skill-level > div.postgresql,
+main > article > section#skills div.skill-level > div.wordpress,
 main > article > section#skills div.skill-level > div.gcp,
 main > article > section#skills div.skill-level > div.linux,
 main > article > section#skills div.skill-level > div.digital-ocean {
@@ -292,6 +302,57 @@ main > article > section#portfolio > div.portfolios > div.portfolio-container > 
     cursor: pointer;
     font-size: 15px;
 }
+main > article > section#contact {
+    grid-area: section-contact;
+    background-color: #003F80;
+    color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 30px 60px 30px;
+    font-family: 'Gayathri', sans-serif;
+}
+main > article > section#contact > h2 {
+    grid-area: section-contact-h2;
+}
+main > article > section#contact > div#form {
+    grid-area: section-contact-form;
+}
+main > article > section#contact > div#form > form > input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+main > article > section#contact > div#form > form > textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 150px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 20px;
+}
+main > article > section#contact > div#form > form > input[type=submit] {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-color: #FFFFFF;
+    color: #003F80;
+    border: 0px;
+    cursor: pointer;
+}
+main > article > section#contact > div#social {
+    grid-area: section-contact-social;
+    padding: 30px 0px;
+    font-size: 20px;
+}
+main > article > section#contact > div#social > p > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
 footer {
     background-color: #003F80;
     color: #FFFFFF;
@@ -318,7 +379,8 @@ main > article {
         "section-education"
         "section-experience"
         "section-skills"
-        "section-portfolio";
+        "section-portfolio"
+        "section-contact";
 }
 main > article > section#home > div#hero {
     display: grid;
@@ -351,7 +413,8 @@ main > article > section#skills {
         "section-skills-h2"
         "section-skills-languages"
         "section-skills-databases"
-        "section-skills-others";
+        "section-skills-others"
+        "section-skills-soft";
 }
 main > article > section#portfolio {
     display: grid;
@@ -359,6 +422,14 @@ main > article > section#portfolio {
     grid-template-areas:
         "section-portfolio-h2"
         "section-portfolios";
+}
+main > article > section#contact {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "section-contact-h2"
+        "section-contact-form"
+        "section-contact-social";
 }
 @media screen and ( min-width: 1000px ) {
     header > nav > i {
@@ -379,31 +450,37 @@ main > article > section#portfolio {
         padding: 10px 100px;
         text-align: right;
     }
+    main > article > section#portfolio > div.portfolios > div.portfolio-container {
+        width: 50%;
+    }
+    main > article > section#contact > div#social {
+        padding: 0px 30px;
+    }
     header > nav {
         grid-template-columns: 20% 80%;
         grid-template-areas:
             "nav-img-text nav-list";
     }
     main > article > section#education > div.education-container {
-        display: grid;
         grid-template-columns: 40% 60%;
         grid-template-areas:
             "section-education-image section-education-content";
     }
     main > article > section#experience > div.experience-container {
-        display: grid;
         grid-template-columns: 40% 60%;
         grid-template-areas:
             "section-experience-organization section-experience-content";
     }
     main > article > section#skills {
-        display: grid;
-        grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+        grid-template-columns: 25% 25% 25% 25%;
         grid-template-areas:
-            "section-skills-h2 section-skills-h2 section-skills-h2"
-            "section-skills-languages section-skills-databases section-skills-others";
+            "section-skills-h2 section-skills-h2 section-skills-h2 section-skills-h2"
+            "section-skills-languages section-skills-databases section-skills-others section-skills-soft";
     }
-    main > article > section#portfolio > div.portfolios > div.portfolio-container {
-        width: 50%;
+    main > article > section#contact {
+        grid-template-columns: 70% 30%;
+        grid-template-areas:
+            "section-contact-h2 section-contact-h2"
+            "section-contact-form section-contact-social";
     }
 }
