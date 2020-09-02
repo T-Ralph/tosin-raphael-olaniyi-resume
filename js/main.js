@@ -34,7 +34,7 @@ submitContactForm = () => {
 
     //Check for swearWords
     for (const swearWord of swearWords) {
-        if (subject.includes(swearWord) || message.includes(swearWord)) {
+        if (subject.toLowerCase().includes(swearWord.toLowerCase()) || message.toLowerCase().includes(swearWord.toLowerCase())) {
             containsSwearWords = true;
         }
     }
@@ -44,7 +44,7 @@ submitContactForm = () => {
         window.location.href = encodeURI(`mailto:Tosin Raphael Olaniyi<hello@tosinraphaelolaniyi.com>?subject=${subject}&body=${message}`);
     }
     else {
-        alert("Let's be professional! No swear words can be used.");
+        alert("Please, be professional! No swear words can be used.");
     }
 
     contactForm.reset();//Reset Form
