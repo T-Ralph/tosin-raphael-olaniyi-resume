@@ -110,13 +110,21 @@ main > article > section#home > div#hero > a {
     border: 1px solid #000000;
     border-radius: 10px;
     cursor: pointer;
-    padding: 10px 30px;
+    padding: 10px 30px 0px 30px;
     text-align: center;
     font-size: 45px;
+    animation-name: hero-a-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
 }
-main > article > section#home > div#hero > a:hover {
-    background-color: #FFFFFF;
-    color: #000000;
+@keyframes hero-a-animation {
+    from {
+        background-color: #003F80;
+    }
+    to {
+        background-color: #000000;
+    }
 }
 main > article > section#education {
     grid-area: section-education;
