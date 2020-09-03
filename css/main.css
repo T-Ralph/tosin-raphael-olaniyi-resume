@@ -231,7 +231,6 @@ main > article > section#skills div.skill-level {
     background-color: #FFFFFF;
     width: 100%;
     height: 20px;
-    border: 1px solid #000000;
     border-radius: 10px;
     font-size: 12px;
 }
