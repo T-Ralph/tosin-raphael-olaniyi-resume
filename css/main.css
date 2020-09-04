@@ -159,7 +159,7 @@ main > article > section#experience > div.experience-container > div.experience-
 }
 main > article > section#education > div.education-container > div.education-content {
     grid-area: section-education-content;
-    text-align: justify;
+    text-align: left;
     padding: 10px;
 }
 main > article > section#education > div.education-container > div.education-content > p > a,
@@ -180,7 +180,7 @@ main > article > section#experience > div.experience-container > div.experience-
 }
 main > article > section#experience > div.experience-container > div.experience-content {
     grid-area: section-experience-content;
-    text-align: justify;
+    text-align: left;
     padding: 10px;
 }
 main > article > section#skills {
