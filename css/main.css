@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #FFFFFF;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+header {
+    background-color: #003F80;
+    opacity: 0.9;
+    color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 40px;
+    padding: 10px 10px;
+    position: fixed;
+    z-index: 1;
+    font-family: 'Gayathri', sans-serif;
+}
+header > nav > h2 {
+    display: none;
+}
+header > nav > a {
+    grid-area: nav-img-text;
+}
+header > nav > a > img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+header > nav > a > span {
+    float: left;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+header > nav > i {
+    grid-area: nav-icon;
+    cursor: pointer;
+}
+header > nav > ul {
+    grid-area: nav-list;
+    display: none;
+    width: 100%;
+    list-style: none;
+    padding: 10px 0px 0px 0px;
+}
+header > nav > ul > li {
+    padding: 10px 0px 0px 0px;
+    text-align: right;
+    font-size: 25px;
+}
+header > nav > a > span > a:link,
+header > nav > a > span > a:hover,
+header > nav > a > span > a:active,
+header > nav > a > span > a:visited,
+header > nav > ul > li > a:link,
+header > nav > ul > li > a:active,
+header > nav > ul > li > a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+header > nav > i:hover,
+header > nav > ul > li > a:hover {
+    color: #CAE1FF;
+}
+main {
+    width: 100%;
+    box-sizing: border-box;
+}
+main > article > h1 {
+    display: none;
+}
+main > article > section#home {
+    grid-area: section-home;
+    background-image: url(../img/section-home-background.jpg);
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+}
+main > article > section#home > div#hero {
+    background-color: #003F80;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+}
+main > article > section#home > div#hero > h2 {
+    grid-area: hero-h2;
+    text-align: center;
+    font-size: 60px;
+}
+main > article > section#home > div#hero > a {
+    grid-area: hero-a;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 30px 0px 30px;
+    text-align: center;
+    font-size: 45px;
+    animation-name: hero-a-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+@keyframes hero-a-animation {
+    from {
+        background-color: #003F80;
+    }
+    to {
+        background-color: #000000;
+    }
+}
+main > article > section#education {
+    grid-area: section-education;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 30px 30px 30px;
+}
+main > article > section#education > h2,
+main > article > section#experience > h2,
+main > article > section#skills > h2,
+main > article > section#portfolio > h2,
+main > article > section#contact > h2 {
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 35px;
+    margin: 70px 0px;
+}
+main > article > section#education > div.education-container,
+main > article > section#experience > div.experience-container {
+    width: 100%;
+    margin: 10px 0px;
+}
+main > article > section#education > div.education-container > div.education-image {
+    grid-area: section-education-image;
+    text-align: left;
+    padding: 10px;
+}
+main > article > section#education > div.education-container > div.education-image > img,
+main > article > section#experience > div.experience-container > div.experience-organization > img {
+    width: 70px;
+    height: 80px;
+}
+main > article > section#education > div.education-container > div.education-content {
+    grid-area: section-education-content;
+    text-align: left;
+    padding: 10px;
+}
+main > article > section#education > div.education-container > div.education-content > p > a,
+main > article > section#experience > div.experience-container > div.experience-content > p > a {
+    color: #003F80;
+    text-decoration: none;
+}
+main > article > section#experience {
+    grid-area: section-experience;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 30px 30px 30px;
+}
+main > article > section#experience > div.experience-container > div.experience-organization {
+    grid-area: section-experience-organization;
+    text-align: left;
+    padding: 10px;
+}
+main > article > section#experience > div.experience-container > div.experience-content {
+    grid-area: section-experience-content;
+    text-align: left;
+    padding: 10px;
+}
+main > article > section#skills {
+    grid-area: section-skills;
+    width: 100%;
+    box-sizing: border-box;
+}
+main > article > section#skills > h2 {
+    grid-area: section-skills-h2;
+}
+main > article > section#skills > div.skills-languages {
+    grid-area: section-skills-languages;
+}
+main > article > section#skills > div.skills-databases {
+    grid-area: section-skills-databases;
+}
+main > article > section#skills > div.skills-others {
+    grid-area: section-skills-others;
+}
+main > article > section#skills > div.skills-soft {
+    grid-area: section-skills-soft;
+}
+main > article > section#skills > div.skills-languages > h3,
+main > article > section#skills > div.skills-databases > h3,
+main > article > section#skills > div.skills-others > h3,
+main > article > section#skills > div.skills-soft > h3,
+main > article > section#contact > div#social > h3 {
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+main > article > section#skills > div.skills-languages,
+main > article > section#skills > div.skills-databases,
+main > article > section#skills > div.skills-others,
+main > article > section#skills > div.skills-soft {
+    padding: 15px 35px;
+}
+main > article > section#skills div.skill-set {
+    width: 100%;
+    margin: 10px 0px;
+}
+main > article > section#skills div.skill-name {
+    font-weight: bold;
+    text-align: center;
+}
+main > article > section#skills div.skill-level {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+main > article > section#skills div.skill-level > div.skill-actual {
+    background-color: #2C5197;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 3px 15px;
+    border-radius: 10px;
+    text-align: right;
+    color: #FFFFFF;
+}
+main > article > section#skills div.skill-level > div.html,
+main > article > section#skills div.skill-level > div.css,
+main > article > section#skills div.skill-level > div.js,
+main > article > section#skills div.skill-level > div.php,
+main > article > section#skills div.skill-level > div.python,
+main > article > section#skills div.skill-level > div.mysql,
+main > article > section#skills div.skill-level > div.sqlite,
+main > article > section#skills div.skill-level > div.rest-api,
+main > article > section#skills div.skill-level > div.json,
+main > article > section#skills div.skill-level > div.leadership,
+main > article > section#skills div.skill-level > div.team-player,
+main > article > section#skills div.skill-level > div.time-management,
+main > article > section#skills div.skill-level > div.communication,
+main > article > section#skills div.skill-level > div.customer-service  {
+    width: 100%;
+}
+main > article > section#skills div.skill-level > div.c-sharp,
+main > article > section#skills div.skill-level > div.postgresql,
+main > article > section#skills div.skill-level > div.wordpress,
+main > article > section#skills div.skill-level > div.gcp,
+main > article > section#skills div.skill-level > div.linux,
+main > article > section#skills div.skill-level > div.digital-ocean {
+    width: 80%;
+}
+main > article > section#portfolio {
+    grid-area: section-portfolio;
+    width: 100%;
+    box-sizing: border-box;
+}
+main > article > section#portfolio > h2 {
+    grid-area: section-portfolio-h2;
+}
+main > article > section#portfolio > div.portfolios-filters {
+    grid-area: section-portfolios-filters;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 30px;
+    text-align: center;
+}
+main > article > section#portfolio > div.portfolios-filters > button.filter-button {
+    background-color: #FFFFFF;
+    color: #003F80;
+    border: 0px;
+    padding: 10px 30px 5px 30px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 15px;
+}
+main > article > section#portfolio > div.portfolios-filters > button.active,
+main > article > section#portfolio > div.portfolios-filters > button.filter-button:hover {
+    background-color: #003F80;
+    color: #FFFFFF;
+}
+main > article > section#portfolio > div.portfolios {
+    grid-area: section-portfolios;
+}
+main > article > section#portfolio > div.portfolios > div.portfolio-container {
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    height: 400px;
+    padding: 0px 30px;
+    margin: 30px 0px;
+    opacity: 0.5;
+    text-align: center;
+}
+main > article > section#portfolio > div.portfolios > div.portfolio-container:hover {
+    opacity: 0.9;
+}
+main > article > section#portfolio > div.portfolios > div.portfolio-container > img {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px -200px 0px;
+    border-radius: 10px;
+}
+main > article > section#portfolio > div.portfolios > div.portfolio-container > a {
+    background-color: #2C5197;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+main > article > section#contact {
+    grid-area: section-contact;
+    background-color: #003F80;
+    color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 30px 60px 30px;
+    font-family: 'Gayathri', sans-serif;
+}
+main > article > section#contact > h2 {
+    grid-area: section-contact-h2;
+}
+main > article > section#contact > div#form {
+    grid-area: section-contact-form;
+}
+main > article > section#contact > div#form > form > input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+main > article > section#contact > div#form > form > textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 150px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 20px;
+}
+main > article > section#contact > div#form > form > input[type=submit] {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-color: #FFFFFF;
+    color: #003F80;
+    border: 0px;
+    cursor: pointer;
+}
+main > article > section#contact > div#social {
+    grid-area: section-contact-social;
+    padding: 30px 0px;
+    font-size: 20px;
+}
+main > article > section#contact > div#social > p > a,
+footer > p > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+footer {
+    background-color: #003F80;
+    color: #FFFFFF;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 15px;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+header > nav {
+    display: grid;
+    grid-template-columns: 95% 5%;
+    grid-template-areas:
+        "nav-img-text nav-icon"
+        "nav-list nav-list";
+}
+main > article {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "section-home"
+        "section-education"
+        "section-experience"
+        "section-skills"
+        "section-portfolio"
+        "section-contact";
+}
+main > article > section#home > div#hero {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "."
+        "."
+        "."
+        "."
+        "."
+        "hero-h2"
+        "hero-a";
+}
+main > article > section#education > div.education-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+        "section-education-image section-education-content";
+}
+main > article > section#experience > div.experience-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+        "section-experience-organization section-experience-content";
+}
+main > article > section#skills {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "section-skills-h2"
+        "section-skills-languages"
+        "section-skills-databases"
+        "section-skills-others"
+        "section-skills-soft";
+}
+main > article > section#portfolio {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "section-portfolio-h2"
+        "section-portfolios-filters"
+        "section-portfolios";
+}
+main > article > section#contact {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "section-contact-h2"
+        "section-contact-form"
+        "section-contact-social";
+}
+@media screen and ( min-width: 1000px ) {
+    header > nav > i {
+        display: none !important;
+    }
+    header > nav > ul {
+        display: block !important;
+        text-align: right;
+        list-style: none;
+    }
+    header > nav > ul > li {
+        display: inline;
+        padding: 0px 20px;
+        font-size: 20px;
+    }
+    main > article > section#education > div.education-container > div.education-image,
+    main > article > section#experience > div.experience-container > div.experience-organization {
+        padding: 10px 100px;
+        text-align: right;
+    }
+    main > article > section#portfolio > div.portfolios > div.portfolio-container {
+        width: 50%;
+    }
+    main > article > section#contact > div#social {
+        padding: 0px 30px;
+    }
+    header > nav {
+        grid-template-columns: 20% 80%;
+        grid-template-areas:
+            "nav-img-text nav-list";
+    }
+    main > article > section#education > div.education-container {
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "section-education-image section-education-content";
+    }
+    main > article > section#experience > div.experience-container {
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "section-experience-organization section-experience-content";
+    }
+    main > article > section#skills {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas:
+            "section-skills-h2 section-skills-h2 section-skills-h2 section-skills-h2"
+            "section-skills-languages section-skills-databases section-skills-others section-skills-soft";
+    }
+    main > article > section#contact {
+        grid-template-columns: 70% 30%;
+        grid-template-areas:
+            "section-contact-h2 section-contact-h2"
+            "section-contact-form section-contact-social";
+    }
+}
