@@ -26,3 +26,4 @@
 Docs: https://docs.google.com/document/d/1rTWkjAguu10WuYsdmlIpvv5Ukd0pZWbzlbpNctVKN4M/edit# <br>
 Trello: https://trello.com/b/LHq2BzXd/milestone-1-front-end-project-by-t-ralph <br>
 GitHub: https://github.com/TECHCareers-by-Manpower/milestone-1-front-end-resume-w-contact-form-T-Ralph <br>
+GitHub.IO Page: https://t-ralph.github.io/tosin-raphael-olaniyi-resume/ <br>
