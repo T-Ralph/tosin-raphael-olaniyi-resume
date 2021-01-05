@@ -263,8 +263,10 @@ main > article > section#skills div.skill-level > div.css,
 main > article > section#skills div.skill-level > div.js,
 main > article > section#skills div.skill-level > div.php,
 main > article > section#skills div.skill-level > div.python,
+main > article > section#skills div.skill-level > div.c-sharp,
 main > article > section#skills div.skill-level > div.mysql,
 main > article > section#skills div.skill-level > div.sqlite,
+main > article > section#skills div.skill-level > div.neo4j,
 main > article > section#skills div.skill-level > div.rest-api,
 main > article > section#skills div.skill-level > div.json,
 main > article > section#skills div.skill-level > div.leadership,
@@ -275,7 +277,6 @@ main > article > section#skills div.skill-level > div.communication,
 main > article > section#skills div.skill-level > div.customer-service  {
     width: 100%;
 }
-main > article > section#skills div.skill-level > div.c-sharp,
 main > article > section#skills div.skill-level > div.postgresql,
 main > article > section#skills div.skill-level > div.wordpress,
 main > article > section#skills div.skill-level > div.gcp,
