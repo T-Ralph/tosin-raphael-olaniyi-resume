@@ -263,14 +263,6 @@ main > article > section#skills div.skill-level > div.css,
 main > article > section#skills div.skill-level > div.js,
 main > article > section#skills div.skill-level > div.php,
 main > article > section#skills div.skill-level > div.python,
-<<<<<<< HEAD
-main > article > section#skills div.skill-level > div.c-sharp,
-main > article > section#skills div.skill-level > div.mysql,
-main > article > section#skills div.skill-level > div.sqlite,
-main > article > section#skills div.skill-level > div.neo4j,
-main > article > section#skills div.skill-level > div.rest-api,
-main > article > section#skills div.skill-level > div.json,
-=======
 main > article > section#skills div.skill-level > div.reactjs,
 main > article > section#skills div.skill-level > div.mariadb,
 main > article > section#skills div.skill-level > div.mysql,
@@ -278,7 +270,6 @@ main > article > section#skills div.skill-level > div.sqlite,
 main > article > section#skills div.skill-level > div.rest-api,
 main > article > section#skills div.skill-level > div.json,
 main > article > section#skills div.skill-level > div.git,
->>>>>>> 98c0e06193ab92b5eada922cea9dc7c2750ffc4b
 main > article > section#skills div.skill-level > div.leadership,
 main > article > section#skills div.skill-level > div.team-player,
 main > article > section#skills div.skill-level > div.problem-solving,
@@ -287,16 +278,13 @@ main > article > section#skills div.skill-level > div.communication,
 main > article > section#skills div.skill-level > div.customer-service  {
     width: 100%;
 }
-<<<<<<< HEAD
-=======
 main > article > section#skills div.skill-level > div.nodejs,
 main > article > section#skills div.skill-level > div.c-sharp,
->>>>>>> 98c0e06193ab92b5eada922cea9dc7c2750ffc4b
 main > article > section#skills div.skill-level > div.postgresql,
 main > article > section#skills div.skill-level > div.wordpress,
-main > article > section#skills div.skill-level > div.gcp,
 main > article > section#skills div.skill-level > div.linux,
-main > article > section#skills div.skill-level > div.digital-ocean {
+main > article > section#skills div.skill-level > div.gcp,
+main > article > section#skills div.skill-level > div.cka {
     width: 80%;
 }
 main > article > section#portfolio {
