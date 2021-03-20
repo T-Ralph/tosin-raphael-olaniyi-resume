@@ -50,7 +50,7 @@ filterPortfolios = (portfolioClass) => {
         }
     }
 }
-submitContactForm = () => {
+submitContactForm = (event) => {
     event.preventDefault(); //Prevent Form Refresh
 
     //Get Values
@@ -60,24 +60,8 @@ submitContactForm = () => {
     const subject = document.querySelector("section#contact > div#form > form > input[name=subject]").value;
     const message = document.querySelector("section#contact > div#form > form > textarea[name=message]").value;
 
-    //Array of Rejected Swear Words
-    const swearWords = ["feldercarb", "frack", "skinjob", "vulgacarb"];
-    let containsSwearWords = false;
-
-    //Check for swearWords
-    for (const swearWord of swearWords) {
-        if (subject.toLowerCase().includes(swearWord.toLowerCase()) || message.toLowerCase().includes(swearWord.toLowerCase())) {
-            containsSwearWords = true;
-        }
-    }
-
-    //Check if swearWords is present
-    if (containsSwearWords == false) {
-        window.location.href = encodeURI(`mailto:Tosin Raphael Olaniyi<hello@tosinraphaelolaniyi.com>?subject=${subject}&body=${message}`);
-    }
-    else {
-        alert("Please, be professional! No swear words can be used.");
-    }
+    //Send mail via user's mail client
+    window.location.href = encodeURI(`mailto:Tosin Raphael Olaniyi<olaniyitralph@gmail.com>?subject=${subject}&body=${message}`);
 
     contactForm.reset();//Reset Form
 }
