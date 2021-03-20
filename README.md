@@ -12,9 +12,6 @@
     - Form has an input for the sender’s email address or their name
     - Form has an input for the subject of the email
     - Form has an input for the body of the email
-    - Form will not allow any of the following ‘swear’ words into the email (fake swear words courtesy of Battlestar Galactica):
-        - ["feldercarb", "frack", "skinjob", "vulgacarb"]
-        - If the user does enter one of these words then an error message will appear reminding the user that you are a professional and you will not tolerate unprofessional language.
 - Website includes a mobile, tablet and desktop layout implemented with a media query
     - CSS is in mobile-first format
 
