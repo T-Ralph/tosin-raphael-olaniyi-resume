@@ -176,6 +176,17 @@ main > article > section#education > div.education-container > div.education-con
     text-align: left;
     padding: 10px;
 }
+main > article > section#education > h3 {
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    font-size: 20px;
+    margin: 70px 0px;
+}
+main > article > section#education > h3.more {
+    cursor: pointer;
+}
 main > article > section#education > div.education-container > div.education-content > p > a,
 main > article > section#experience > div.experience-container > div.experience-content > p > a {
     color: #003F80;
@@ -286,7 +297,8 @@ main > article > section#skills div.skill-level > div.wordpress,
 main > article > section#skills div.skill-level > div.linux,
 main > article > section#skills div.skill-level > div.gcp,
 main > article > section#skills div.skill-level > div.aws,
-main > article > section#skills div.skill-level > div.cka {
+main > article > section#skills div.skill-level > div.azure,
+main > article > section#skills div.skill-level > div.kubernetes {
     width: 80%;
 }
 main > article > section#portfolio {
@@ -419,7 +431,7 @@ footer {
     display: block;
 }
 .hide {
-    display: none;
+    display: none !important;
 }
 header > nav {
     display: grid;

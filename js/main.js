@@ -1,5 +1,6 @@
 //Declare Constants
-let menuMobileDisplay = true; //Set menuMobileDisplay
+let menuMobileDisplay = true;
+let educationMoreDisplay = true;
 
 //Declare Functions
 menuToggle = () => {
@@ -16,6 +17,38 @@ menuToggle = () => {
         menuIcon.className = "fas fa-bars fa-2x";
         navigationList.style.display = "none";
         menuMobileDisplay = true; //Set menuMobileDisplay
+    }
+}
+toggleEducationMore = () => {
+    //Get More Education Containers
+    const moreEducation = document.querySelectorAll("main > article > section#education > div.education-more");
+
+    //Get More Education Text
+    const educationMoreText = document.querySelectorAll("main > article > section#education > h3.more");
+
+    if (educationMoreDisplay) {
+        //Show More Education
+        //Remove 'hide' Class From Education More Containers and Add 'show' Class
+        moreEducation.forEach((education) => {
+            if (education.classList.contains("hide")) {
+                education.classList.remove("hide");
+                education.classList.add("show");
+            }
+        });
+        educationMoreText[0].innerText = "Less";
+        educationMoreDisplay = false; //Set educationMoreDisplay
+    }
+    else {
+        //Hide More Education
+        //Remove 'show' Class From Education More Containers and Add 'hide' Class
+        moreEducation.forEach((education) => {
+            if (education.classList.contains("show")) {
+                education.classList.remove("show");
+                education.classList.add("hide");
+            }
+        });
+        educationMoreText[0].innerText = "More";
+        educationMoreDisplay = true; //Set educationMoreDisplay
     }
 }
 filterPortfolios = (portfolioClass) => {
@@ -73,6 +106,10 @@ menuIcon.addEventListener("click", menuToggle);
 //Add Event Listener to Navigation List
 const navigationList = document.querySelector("header > nav > ul");
 navigationList.addEventListener("click", menuToggle);
+
+//Add Event Listener to Education More
+const educationMore = document.querySelectorAll("main > article > section#education > h3.more");
+educationMore[0].addEventListener("click", function(){toggleEducationMore()}, false);
 
 //Add Event Listener to Portfolio Filter Buttons
 const portfolioFilterButtons = document.querySelectorAll("main > article > section#portfolio > div.portfolios-filters > button.filter-button");
