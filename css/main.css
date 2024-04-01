@@ -298,7 +298,8 @@ main > article > section#skills div.skill-level > div.linux,
 main > article > section#skills div.skill-level > div.gcp,
 main > article > section#skills div.skill-level > div.aws,
 main > article > section#skills div.skill-level > div.azure,
-main > article > section#skills div.skill-level > div.kubernetes {
+main > article > section#skills div.skill-level > div.kubernetes,
+main > article > section#skills div.skill-level > div.ai-ml {
     width: 80%;
 }
 main > article > section#portfolio {
